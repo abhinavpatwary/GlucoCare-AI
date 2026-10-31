@@ -1,2 +1,1 @@
-# GlucoCare-AI
-AI powered diabetes risk estimate
+GlucoCare AI: AI-Powered Diabetes Risk Prediction & Preventive Healthcare Intelligence Platform
