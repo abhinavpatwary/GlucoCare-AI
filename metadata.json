@@ -1,0 +1,8 @@
+{
+  "name": "GlucoCare AI",
+  "description": "AI-Powered Diabetes Risk Prediction & Preventive Healthcare Intelligence Platform. Supervised machine learning screening models, feature importance explainability, interactive clinical dataset exploration, and comprehensive risk reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

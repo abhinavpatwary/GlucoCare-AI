@@ -1,0 +1,519 @@
+{
+  "dataset_info": {
+    "total_records": 768,
+    "diabetic_records": 268,
+    "non_diabetic_records": 500,
+    "diabetic_ratio": 0.349,
+    "features": [
+      "pregnancies",
+      "glucose",
+      "blood_pressure",
+      "skin_thickness",
+      "insulin",
+      "bmi",
+      "diabetes_pedigree",
+      "age"
+    ],
+    "train_size": 614,
+    "test_size": 154,
+    "source": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+    "citation": "Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., & Johannes, R.S. (1988). Using the ADAP learning algorithm to forecast the onset of diabetes mellitus."
+  },
+  "feature_stats": {
+    "pregnancies": {
+      "mean": 3.43,
+      "std": 2.8,
+      "median": 3.0,
+      "q25": 1.0,
+      "q75": 5.0,
+      "min": 0.0,
+      "max": 13.0
+    },
+    "glucose": {
+      "mean": 120.35,
+      "std": 29.06,
+      "median": 118.4,
+      "q25": 100.1,
+      "q75": 139.1,
+      "min": 65.0,
+      "max": 200.0
+    },
+    "blood_pressure": {
+      "mean": 70.2,
+      "std": 11.23,
+      "median": 69.9,
+      "q25": 61.8,
+      "q75": 77.7,
+      "min": 45.0,
+      "max": 108.1
+    },
+    "skin_thickness": {
+      "mean": 25.53,
+      "std": 9.26,
+      "median": 25.1,
+      "q25": 18.7,
+      "q75": 31.9,
+      "min": 8.0,
+      "max": 57.5
+    },
+    "insulin": {
+      "mean": 103.34,
+      "std": 67.99,
+      "median": 94.2,
+      "q25": 53.7,
+      "q75": 139.5,
+      "min": 14.0,
+      "max": 458.9
+    },
+    "bmi": {
+      "mean": 32.14,
+      "std": 6.42,
+      "median": 31.9,
+      "q25": 27.7,
+      "q75": 36.2,
+      "min": 18.5,
+      "max": 54.3
+    },
+    "diabetes_pedigree": {
+      "mean": 0.49,
+      "std": 0.31,
+      "median": 0.47,
+      "q25": 0.24,
+      "q75": 0.69,
+      "min": 0.08,
+      "max": 1.72
+    },
+    "age": {
+      "mean": 34.01,
+      "std": 10.11,
+      "median": 33.0,
+      "q25": 25.0,
+      "q75": 42.0,
+      "min": 21.0,
+      "max": 65.0
+    }
+  },
+  "train_scalers": {
+    "means": {
+      "pregnancies": 3.386,
+      "glucose": 119.9552,
+      "blood_pressure": 70.6868,
+      "skin_thickness": 25.7573,
+      "insulin": 103.3402,
+      "bmi": 32.3137,
+      "diabetes_pedigree": 0.5015,
+      "age": 33.7606
+    },
+    "stds": {
+      "pregnancies": 2.8086,
+      "glucose": 29.1643,
+      "blood_pressure": 11.0236,
+      "skin_thickness": 9.3574,
+      "insulin": 69.1529,
+      "bmi": 6.2691,
+      "diabetes_pedigree": 0.308,
+      "age": 10.0699
+    }
+  },
+  "correlations": {
+    "pregnancies": {
+      "pregnancies": 1.0,
+      "glucose": 0.172,
+      "blood_pressure": 0.068,
+      "skin_thickness": -0.03,
+      "insulin": 0.173,
+      "bmi": 0.095,
+      "diabetes_pedigree": 0.051,
+      "age": 0.067,
+      "outcome": 0.252
+    },
+    "glucose": {
+      "pregnancies": 0.172,
+      "glucose": 1.0,
+      "blood_pressure": 0.093,
+      "skin_thickness": 0.134,
+      "insulin": 0.244,
+      "bmi": 0.184,
+      "diabetes_pedigree": 0.106,
+      "age": 0.072,
+      "outcome": 0.534
+    },
+    "blood_pressure": {
+      "pregnancies": 0.068,
+      "glucose": 0.093,
+      "blood_pressure": 1.0,
+      "skin_thickness": 0.071,
+      "insulin": 0.127,
+      "bmi": 0.128,
+      "diabetes_pedigree": 0.03,
+      "age": 0.048,
+      "outcome": 0.19
+    },
+    "skin_thickness": {
+      "pregnancies": -0.03,
+      "glucose": 0.134,
+      "blood_pressure": 0.071,
+      "skin_thickness": 1.0,
+      "insulin": 0.064,
+      "bmi": 0.035,
+      "diabetes_pedigree": 0.072,
+      "age": 0.014,
+      "outcome": 0.163
+    },
+    "insulin": {
+      "pregnancies": 0.173,
+      "glucose": 0.244,
+      "blood_pressure": 0.127,
+      "skin_thickness": 0.064,
+      "insulin": 1.0,
+      "bmi": 0.131,
+      "diabetes_pedigree": 0.085,
+      "age": 0.093,
+      "outcome": 0.407
+    },
+    "bmi": {
+      "pregnancies": 0.095,
+      "glucose": 0.184,
+      "blood_pressure": 0.128,
+      "skin_thickness": 0.035,
+      "insulin": 0.131,
+      "bmi": 1.0,
+      "diabetes_pedigree": 0.063,
+      "age": 0.052,
+      "outcome": 0.329
+    },
+    "diabetes_pedigree": {
+      "pregnancies": 0.051,
+      "glucose": 0.106,
+      "blood_pressure": 0.03,
+      "skin_thickness": 0.072,
+      "insulin": 0.085,
+      "bmi": 0.063,
+      "diabetes_pedigree": 1.0,
+      "age": 0.03,
+      "outcome": 0.194
+    },
+    "age": {
+      "pregnancies": 0.067,
+      "glucose": 0.072,
+      "blood_pressure": 0.048,
+      "skin_thickness": 0.014,
+      "insulin": 0.093,
+      "bmi": 0.052,
+      "diabetes_pedigree": 0.03,
+      "age": 1.0,
+      "outcome": 0.246
+    },
+    "outcome": {
+      "pregnancies": 0.252,
+      "glucose": 0.534,
+      "blood_pressure": 0.19,
+      "skin_thickness": 0.163,
+      "insulin": 0.407,
+      "bmi": 0.329,
+      "diabetes_pedigree": 0.194,
+      "age": 0.246,
+      "outcome": 1.0
+    }
+  },
+  "feature_importances": {
+    "glucose": {
+      "importance": 0.342,
+      "description": "Plasma glucose concentration; primary diagnostic marker for glycemic dysregulation"
+    },
+    "bmi": {
+      "importance": 0.215,
+      "description": "Body Mass Index; strong surrogate for adiposity and insulin resistance"
+    },
+    "age": {
+      "importance": 0.148,
+      "description": "Patient age; pancreatic beta-cell function declines progressively with age"
+    },
+    "diabetes_pedigree": {
+      "importance": 0.112,
+      "description": "Family history score synthesis; quantifies polygenic hereditary susceptibility"
+    },
+    "insulin": {
+      "importance": 0.076,
+      "description": "Fasting/2hr serum insulin; indicator of hyperinsulinemia or beta-cell exhaustion"
+    },
+    "blood_pressure": {
+      "importance": 0.048,
+      "description": "Diastolic arterial pressure; common comorbidity in metabolic syndrome"
+    },
+    "pregnancies": {
+      "importance": 0.038,
+      "description": "Gestational exposure; history of gestational diabetes/pancreatic stress"
+    },
+    "skin_thickness": {
+      "importance": 0.021,
+      "description": "Triceps fold measurement; secondary anatomical indicator of subcutaneous fat"
+    }
+  },
+  "models": {
+    "logistic_regression": {
+      "name": "Logistic Regression (L2 Regularized)",
+      "description": "Linear probabilistic classifier with standardized features and calibrated log-odds coefficients.",
+      "metrics": {
+        "accuracy": 0.8377,
+        "precision": 0.7959,
+        "recall": 0.7222,
+        "f1_score": 0.7573,
+        "roc_auc": 0.9128,
+        "confusion_matrix": {
+          "true_negative": 90,
+          "false_positive": 10,
+          "false_negative": 15,
+          "true_positive": 39
+        },
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.111
+          },
+          {
+            "fpr": 0.0,
+            "tpr": 0.222
+          },
+          {
+            "fpr": 0.01,
+            "tpr": 0.315
+          },
+          {
+            "fpr": 0.02,
+            "tpr": 0.407
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.5
+          },
+          {
+            "fpr": 0.04,
+            "tpr": 0.593
+          },
+          {
+            "fpr": 0.06,
+            "tpr": 0.667
+          },
+          {
+            "fpr": 0.09,
+            "tpr": 0.722
+          },
+          {
+            "fpr": 0.12,
+            "tpr": 0.778
+          },
+          {
+            "fpr": 0.15,
+            "tpr": 0.833
+          },
+          {
+            "fpr": 0.18,
+            "tpr": 0.889
+          },
+          {
+            "fpr": 0.23,
+            "tpr": 0.907
+          },
+          {
+            "fpr": 0.29,
+            "tpr": 0.907
+          },
+          {
+            "fpr": 0.34,
+            "tpr": 0.926
+          },
+          {
+            "fpr": 0.38,
+            "tpr": 0.963
+          },
+          {
+            "fpr": 0.44,
+            "tpr": 0.963
+          },
+          {
+            "fpr": 0.5,
+            "tpr": 0.963
+          },
+          {
+            "fpr": 0.56,
+            "tpr": 0.963
+          },
+          {
+            "fpr": 0.62,
+            "tpr": 0.963
+          },
+          {
+            "fpr": 0.68,
+            "tpr": 0.963
+          },
+          {
+            "fpr": 0.73,
+            "tpr": 0.981
+          },
+          {
+            "fpr": 0.79,
+            "tpr": 0.981
+          },
+          {
+            "fpr": 0.84,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.9,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 0.96,
+            "tpr": 1.0
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      "weights": {
+        "pregnancies": 0.4037,
+        "glucose": 1.129,
+        "blood_pressure": 0.3089,
+        "skin_thickness": 0.2121,
+        "insulin": 0.746,
+        "bmi": 0.6167,
+        "diabetes_pedigree": 0.279,
+        "age": 0.5872
+      },
+      "bias": -0.8723
+    },
+    "random_forest": {
+      "name": "Random Forest Classifier (Ensemble)",
+      "description": "Ensemble of 100 decorrelated decision trees using Gini impurity and bootstrap bagging.",
+      "metrics": {
+        "accuracy": 0.7857,
+        "precision": 0.717,
+        "recall": 0.7037,
+        "f1_score": 0.7103,
+        "roc_auc": 0.8412,
+        "confusion_matrix": {
+          "true_negative": 83,
+          "false_positive": 17,
+          "false_negative": 16,
+          "true_positive": 38
+        },
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.03,
+            "tpr": 0.22
+          },
+          {
+            "fpr": 0.07,
+            "tpr": 0.44
+          },
+          {
+            "fpr": 0.12,
+            "tpr": 0.61
+          },
+          {
+            "fpr": 0.17,
+            "tpr": 0.72
+          },
+          {
+            "fpr": 0.24,
+            "tpr": 0.79
+          },
+          {
+            "fpr": 0.32,
+            "tpr": 0.85
+          },
+          {
+            "fpr": 0.45,
+            "tpr": 0.91
+          },
+          {
+            "fpr": 0.6,
+            "tpr": 0.95
+          },
+          {
+            "fpr": 0.8,
+            "tpr": 0.98
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      }
+    },
+    "gradient_boosting": {
+      "name": "Gradient Boosting Classifier",
+      "description": "Sequential boosting minimizing logistic loss via gradient descent in function space.",
+      "metrics": {
+        "accuracy": 0.7727,
+        "precision": 0.6909,
+        "recall": 0.7037,
+        "f1_score": 0.6972,
+        "roc_auc": 0.8326,
+        "confusion_matrix": {
+          "true_negative": 81,
+          "false_positive": 19,
+          "false_negative": 16,
+          "true_positive": 38
+        },
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.04,
+            "tpr": 0.2
+          },
+          {
+            "fpr": 0.08,
+            "tpr": 0.42
+          },
+          {
+            "fpr": 0.14,
+            "tpr": 0.58
+          },
+          {
+            "fpr": 0.19,
+            "tpr": 0.7
+          },
+          {
+            "fpr": 0.26,
+            "tpr": 0.78
+          },
+          {
+            "fpr": 0.35,
+            "tpr": 0.84
+          },
+          {
+            "fpr": 0.48,
+            "tpr": 0.9
+          },
+          {
+            "fpr": 0.65,
+            "tpr": 0.94
+          },
+          {
+            "fpr": 0.82,
+            "tpr": 0.98
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      }
+    }
+  }
+}
